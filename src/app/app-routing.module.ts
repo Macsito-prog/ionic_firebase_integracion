@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
 const routes: Routes = [
   {
@@ -8,8 +9,27 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: '/home',
     pathMatch: 'full'
+  },
+
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'dashboard',
+    ...canActivate(()=>redirectUnauthorizedTo(['/home'])),
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule),
+    
+  },
+  {
+    path: 'mapa',
+    loadChildren: () => import('./tarjetas/mapa/mapa.module').then( m => m.MapaPageModule)
+  },
+  {
+    path: 'youtube',
+    loadChildren: () => import('./tarjetas/youtube/youtube.module').then( m => m.YoutubePageModule)
   },
 ];
 
