@@ -26,7 +26,7 @@ export class YoutubePage implements OnInit {
       this._videoPlayer = WebVPPlugin.CapacitorVideoPlayer
     }
     // define the video url
-    this._url = "https://vimeo.com/720945697"
+    this._url = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuck/Bunny.mp4"
     // add listeners to the plugin
    
   }
