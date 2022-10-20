@@ -1,12 +1,20 @@
 <ion-header>
   <ion-toolbar>
+  <ion-button slot="start">
+    <ionic-back-button defaultHref="home">
+
+    </ionic-back-button>
+  </ion-button>
     <ion-title>mapa</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="dashboard"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDisV35iqk3kK7pyxzqGqGKAONp85I7daQ"></script>
 </ion-header>
 
 <ion-content>
+
+  <div id="map"></div>
 
 </ion-content>

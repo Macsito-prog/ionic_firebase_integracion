@@ -34,10 +34,13 @@ import {
   ReactiveFormsModule
 } from '@angular/forms';
 
+import{
+  HttpClientModule
+} from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [ReactiveFormsModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth())],
+  imports: [HttpClientModule,ReactiveFormsModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth())],
   providers: [{
     provide: RouteReuseStrategy,
     useClass: IonicRouteStrategy
