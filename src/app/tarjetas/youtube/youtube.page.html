@@ -7,6 +7,15 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Video</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  
+  <app-explore-container name="youtube"></app-explore-container>
+  <ion-button color="secondary"(click)="play()">Play</ion-button>
 
 </ion-content>

@@ -38,6 +38,8 @@ import{
   HttpClientModule
 } from '@angular/common/http';
 
+
+
 @NgModule({
   declarations: [AppComponent],
   imports: [HttpClientModule,ReactiveFormsModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth())],

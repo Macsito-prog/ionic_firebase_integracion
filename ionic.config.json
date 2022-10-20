@@ -1,5 +1,8 @@
 {
   "name": "proyecto_dos",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular"
 }
