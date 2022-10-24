@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
+import { UserI } from '../models/modell';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,14 @@ import { UserService } from '../services/user.service';
 export class LoginPage implements OnInit {
 
   ionicForm : FormGroup;
+  datos: UserI = {
+    nombre: null,
+    edad: null,
+    corrreo: null,
+    uid: null,
+    contra: null,
+    perfil: 'Usuario normal'
+  }
 
   constructor(private user : UserService,
     public formBuilder:FormBuilder,
